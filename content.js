@@ -11,7 +11,7 @@ let settings = {
     interventions: true,
     topics: true,
     outcomes: false,
-    glossary: true,
+    glossary: false,
   },
   linkOption: "first", // 'first' or 'all'
 };
@@ -89,7 +89,7 @@ function validateSettings(settings) {
       glossary:
         typeof settings.contentTypes?.glossary === "boolean"
           ? settings.contentTypes.glossary
-          : true,
+          : false,
     },
     linkOption: ["first", "all"].includes(settings.linkOption)
       ? settings.linkOption

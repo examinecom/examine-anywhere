@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     contentTypes = {
       interventions: true,
       topics: true,
-      glossary: true,
+      glossary: false,
       outcomes: false,
     },
     linkOption = "first",
