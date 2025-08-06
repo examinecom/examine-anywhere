@@ -224,6 +224,10 @@ function createGlossaryLink(matchedText, glossaryItem) {
   link.dataset.type = glossaryItem.content_type;
   link.href = `https://examine.com${glossaryItem.url}?utm_source=browser-extension-chrome&utm_medium=external&utm_campaign=browser-extension`;
   link.target = "_blank";
+
+  if (window.location.hostname === "pubmed.ncbi.nlm.nih.gov") {
+    link.style.display = "inline";
+  }
   link.appendChild(document.createTextNode(matchedText));
   return link;
 }
